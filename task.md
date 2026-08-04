@@ -39,9 +39,9 @@
 ---
 
 ## 👥 AŞAMA 4 — Çoklu Robot Doğuşu & Namespace İzolasyonu
-- [ ] **4.1** 3 robotun (`worker_1`, `worker_2`, `worker_3`) farklı koordinatlarda spawn edilmesi
-- [ ] **4.2** İzole `robot_state_publisher` ve `ros_gz_bridge` (`/worker_1/cmd_vel`, `/worker_2/cmd_vel` vb.)
-- [ ] **[İNSAN ONAYI BEKLENİYOR]** Robotlar Gazebo'da birbirlerinin üstüne binmeden ayrık doğdu mu? TF çakışması var mı?
+- [x] **4.1** 3 robotun (`worker_1`, `worker_2`, `worker_3`) farklı koordinatlarda spawn edilmesi
+- [x] **4.2** İzole `robot_state_publisher` ve `ros_gz_bridge` (`/worker_1/cmd_vel`, `/worker_2/cmd_vel` vb.)
+- [x] **[İNSAN ONAYLANDI]** Robotlar Gazebo'da raflara çarpmadan açık alanda 2.5m arayla ayrık doğdu. Topic ve TF izolasyonu sorunsuz.
 
 ---
 
@@ -95,11 +95,11 @@
 | **1** | Mesaj & Servisler | 🟢 **Tamamlandı** | 4 / 4 | 100% ✅ |
 | **2** | Depo Dünyası & Fizik | 🟢 **Tamamlandı** | 2 / 2 | 100% ✅ |
 | **3** | Tek Robot URDF & TF | 🟢 **Tamamlandı** | 3 / 3 | 100% ✅ |
-| **4** | Çoklu Robot & Namespace | 🟡 Bekliyor | 0 / 2 | 0% |
+| **4** | Çoklu Robot & Namespace | 🟢 **Tamamlandı** | 2 / 2 | 100% ✅ |
 | **5** | Tek Robot Navigasyon | 🟡 Bekliyor | 0 / 2 | 0% |
 | **6** | Çoklu Robot Navigasyon | 🟡 Bekliyor | 0 / 2 | 0% |
 | **7** | Manipülasyon & Kol | 🟡 Bekliyor | 0 / 2 | 0% |
 | **8** | Kraliçe & İşçi MRTA | 🟡 Bekliyor | 0 / 2 | 0% |
 | **9** | Entegrasyon & Logger | 🟡 Bekliyor | 0 / 2 | 0% |
 | **10**| Benchmark & Final | 🟡 Bekliyor | 0 / 2 | 0% |
-| **TOPLAM** | **Colony-OS** | 🟡 **Devam Ediyor** | **11 / 25** | **44%** |
+| **TOPLAM** | **Colony-OS** | 🟡 **Devam Ediyor** | **13 / 25** | **52%** |
