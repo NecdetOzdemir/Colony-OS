@@ -1,6 +1,6 @@
 # 🐝 Colony-OS
 
-> **TÜBİTAK 2209-A** — Çoklu Robot Yönetim Sistemi (MRTA)
+> **Bitirme Projesi** — Çoklu Robot Yönetim Sistemi (MRTA)
 > Hiyerarşik "Kraliçe-İşçi" mimarisine dayanan otonom depo otomasyonu.
 
 ---
@@ -132,4 +132,4 @@ CC.AUCTION_TIMEOUT_SEC  # Teklif bekleme süresi
 
 ---
 
-*TÜBİTAK 2209-A Üniversite Öğrencileri Araştırma Projeleri Desteği Programı*
+*Bilgisayar Mühendisliği Bitirme Projesi — Colony-OS*

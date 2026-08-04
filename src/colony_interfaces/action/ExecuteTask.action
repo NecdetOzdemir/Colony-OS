@@ -1,0 +1,25 @@
+# Colony-OS — ExecuteTask Action
+# İşçi bu action server'ı üzerinden görevi uçtan uca yürütür
+# (navigasyon + manipülasyon dahil)
+
+# --- GOAL ---
+# Yürütülecek görev
+colony_interfaces/Task task
+---
+# --- RESULT ---
+# Görev başarıyla tamamlandı mı?
+bool success
+# Görevin toplam tamamlanma süresi (saniye)
+float64 completion_time_sec
+# Kat edilen toplam mesafe (metre)
+float64 travel_distance_m
+# Sonuç açıklaması
+string message
+---
+# --- FEEDBACK ---
+# Anlık ilerleme oranı (0.0 = başlamadı, 1.0 = tamamlandı)
+float32 progress
+# Mevcut faz: "NAVIGATING_TO_TARGET" | "MANIPULATING" | "RETURNING" | "DONE"
+string current_phase
+# Hedefe kalan tahmini süre (saniye)
+float64 eta_sec

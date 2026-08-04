@@ -1,0 +1,14 @@
+# Colony-OS — AssignTask Servisi
+# Kraliçe, auction kazananına görevi bu servis ile resmî olarak atar
+
+# --- REQUEST ---
+# Atanacak görev
+colony_interfaces/Task task
+# Görevi alacak işçi
+string worker_id
+---
+# --- RESPONSE ---
+# Atama başarılı mı?
+bool success
+# Başarı/hata mesajı
+string message

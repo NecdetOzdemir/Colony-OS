@@ -2,7 +2,7 @@
 
 > Son güncelleme: 2026-08-04
 > Durum: 🔴 Başlamadı | 🟡 Devam Ediyor | 🟢 Tamamlandı
-> Build: `colcon build --packages-select colony_config` → ✅ 0.85s
+> Build: `colony_config` ✅ 0.85s | `colony_interfaces` ✅ 6.34s
 
 ---
 
@@ -15,31 +15,31 @@
   - [x] **0.2.3** `__init__.py` — paketi import edilebilir yap
   - [x] **0.2.4** `package.xml` + `setup.py` dosyaları
 - [x] **0.3** `.agents/AGENTS.md` ajan kurallarını yaz
-- [ ] **0.4** Proje `README.md` oluştur
+- [x] **0.4** Proje `README.md` oluştur
 - [x] **0.5** `.gitignore` ekle (build/, install/, log/ vs.)
-- [ ] **0.6** Eksik paket kurulumu (nav2-bringup, xacro, robot-state-publisher)
+- [x] **0.6** Eksik paket kurulumu (nav2-bringup, xacro, robot-state-publisher)
 
 ---
 
 ## 📦 AŞAMA 1 — colony_interfaces (Mesaj/Servis/Action Tanımları)
 
-- [ ] **1.1** Paket iskeletini oluştur (`package.xml`, `CMakeLists.txt`)
-- [ ] **1.2** `Task.msg` tanımla
-  - [ ] task_id, task_type (PICK/PLACE), object_id
-  - [ ] target_x, target_y, target_z (3D koordinat)
-  - [ ] priority, status
-- [ ] **1.3** `Bid.msg` tanımla
-  - [ ] worker_id, task_id, cost (tahmini mesafe/süre), timestamp
-- [ ] **1.4** `WorkerStatus.msg` tanımla
-  - [ ] worker_id, state (IDLE/BUSY/ERROR), current_task_id, position
-- [ ] **1.5** `AssignTask.srv` tanımla
-  - [ ] Request: task + worker_id
-  - [ ] Response: success + message
-- [ ] **1.6** `ExecuteTask.action` tanımla
-  - [ ] Goal: Task
-  - [ ] Result: success, completion_time
-  - [ ] Feedback: progress (0.0-1.0), current_phase
-- [ ] **1.7** `colcon build` ile derleme testi
+- [x] **1.1** Paket iskeletini oluştur (`package.xml`, `CMakeLists.txt`)
+- [x] **1.2** `Task.msg` tanımla
+  - [x] task_id, task_type (PICK/PLACE), object_id
+  - [x] target_x, target_y, target_z (3D koordinat)
+  - [x] priority, status
+- [x] **1.3** `Bid.msg` tanımla
+  - [x] worker_id, task_id, cost (tahmini mesafe/süre), timestamp
+- [x] **1.4** `WorkerStatus.msg` tanımla
+  - [x] worker_id, state (IDLE/BUSY/ERROR), current_task_id, position
+- [x] **1.5** `AssignTask.srv` tanımla
+  - [x] Request: task + worker_id
+  - [x] Response: success + message
+- [x] **1.6** `ExecuteTask.action` tanımla
+  - [x] Goal: Task
+  - [x] Result: success, completion_time
+  - [x] Feedback: progress (0.0-1.0), current_phase
+- [x] **1.7** `colcon build` ile derleme testi
 
 ---
 
@@ -175,22 +175,12 @@
 
 ---
 
-## 📝 AŞAMA 10 — Akademik Çıktılar
-
-- [ ] **10.1** Açık kaynak GitHub repo hazırla
-- [ ] **10.2** README detaylandır (kurulum, çalıştırma talimatları)
-- [ ] **10.3** Benchmark veri seti hazırla
-- [ ] **10.4** Konferans bildirisi taslağı
-- [ ] **10.5** Akademik makale taslağı
-
----
-
 ## 📈 İlerleme Özeti
 
 | Aşama | Tamamlanan | Toplam | % |
 |-------|-----------|--------|---|
-| 0 - Altyapı | 4 | 6 | 67% |
-| 1 - Interfaces | 0 | 7 | 0% |
+| 0 - Altyapı | 6 | 6 | **100%** ✅ |
+| 1 - Interfaces | 7 | 7 | **100%** ✅ |
 | 2 - Description | 0 | 7 | 0% |
 | 3 - Navigation | 0 | 6 | 0% |
 | 4 - Manipulation | 0 | 5 | 0% |
@@ -199,5 +189,4 @@
 | 7 - Logger | 0 | 3 | 0% |
 | 8 - Bringup | 0 | 3 | 0% |
 | 9 - Benchmark | 0 | 6 | 0% |
-| 10 - Akademik | 0 | 5 | 0% |
-| **TOPLAM** | **4** | **58** | **7%** |
+| **TOPLAM** | **13** | **53** | **25%** |
