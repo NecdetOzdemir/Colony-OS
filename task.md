@@ -45,22 +45,22 @@
 
 ## 🌍 AŞAMA 2 — colony_description (Robot & Dünya Modelleri)
 
-- [ ] **2.1** Paket iskeletini oluştur
-- [ ] **2.2** Depo dünyası SDF dosyası (`warehouse.sdf`)
-  - [ ] Zemin, duvarlar
-  - [ ] Raf sistemi (en az 4 raf — `colony_config`'den boyutlar gelecek)
-  - [ ] Pick istasyonları (A, B, C tipi)
-  - [ ] Place istasyonları
-  - [ ] Işıklandırma
-- [ ] **2.3** A/B/C tipi nesne SDF modelleri
-- [ ] **2.4** Husky mobil taban URDF/xacro
-  - [ ] Tekerlek fizik özellikleri
-  - [ ] Sanal Lidar sensörü (laser_scan)
-  - [ ] Odometri plugin
-  - [ ] diff_drive_controller
-- [ ] **2.5** Worker robot birleştirme (Husky + basit kol ya da sadece mobil)
-- [ ] **2.6** Gazebo'da spawn testi (tek robot)
-- [ ] **2.7** `ros_gz_bridge` topic mapping testi (LaserScan, Odometry, Cmd_vel)
+- [x] **2.1** Paket iskeletini oluştur
+- [x] **2.2** Depo dünyası SDF dosyası (`warehouse.sdf`)
+  - [x] Zemin, duvarlar
+  - [x] Raf sistemi (en az 4 raf — `colony_config`'den boyutlar gelecek)
+  - [x] Pick istasyonları (A, B, C tipi)
+  - [x] Place istasyonları
+  - [x] Işıklandırma
+- [x] **2.3** A/B/C tipi nesne SDF modelleri
+- [x] **2.4** Husky mobil taban URDF/xacro
+  - [x] Tekerlek fizik özellikleri
+  - [x] Sanal Lidar sensörü (laser_scan)
+  - [x] Odometri plugin
+  - [x] diff_drive_controller
+- [x] **2.5** Worker robot birleştirme (Husky + basit kol ya da sadece mobil)
+- [x] **2.6** Gazebo'da spawn testi (tek robot)
+- [x] **2.7** `ros_gz_bridge` topic mapping testi (LaserScan, Odometry, Cmd_vel)
 
 ---
 
@@ -181,7 +181,7 @@
 |-------|-----------|--------|---|
 | 0 - Altyapı | 6 | 6 | **100%** ✅ |
 | 1 - Interfaces | 7 | 7 | **100%** ✅ |
-| 2 - Description | 0 | 7 | 0% |
+| 2 - Description | 7 | 7 | **100%** ✅ |
 | 3 - Navigation | 0 | 6 | 0% |
 | 4 - Manipulation | 0 | 5 | 0% |
 | 5 - Queen | 0 | 5 | 0% |
@@ -189,4 +189,4 @@
 | 7 - Logger | 0 | 3 | 0% |
 | 8 - Bringup | 0 | 3 | 0% |
 | 9 - Benchmark | 0 | 6 | 0% |
-| **TOPLAM** | **13** | **53** | **25%** |
+| **TOPLAM** | **20** | **53** | **37%** |
