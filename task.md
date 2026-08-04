@@ -24,9 +24,9 @@
 ---
 
 ## 🏛️ AŞAMA 2 — Depo Dünyası & Fiziksel Çevre (`colony_description`)
-- [ ] **2.1** Gazebo depo dünyası (`warehouse.sdf`) ve şarj istasyonu bölgesi
-- [ ] **2.2** Sadece haritayı başlatan `world.launch.py`
-- [ ] **[İNSAN ONAYI BEKLENİYOR]** Gazebo açıldığında **SIFIR ROBOT** ile depo haritası düzgün görünüyor mu? ROS `/clock` bağlantısı var mı?
+- [x] **2.1** Gazebo depo dünyası (`warehouse.sdf`) ve duvarlar/raflar
+- [x] **2.2** Sadece haritayı başlatan `world.launch.py`
+- [x] **[İNSAN ONAYLANDI]** Gazebo açıldığında SIFIR ROBOT ile temiz depo haritası (duvarlar + raflar) görüntülendi. ROS `/clock` bağlı.
 
 ---
 
@@ -93,7 +93,7 @@
 |-------|-----|-------|---------------------|---|
 | **0** | Proje Mimarisi & Config | 🟢 **Tamamlandı** | 2 / 2 | 100% ✅ |
 | **1** | Mesaj & Servisler | 🟢 **Tamamlandı** | 4 / 4 | 100% ✅ |
-| **2** | Depo Dünyası & Fizik | 🟡 Bekliyor | 0 / 2 | 0% |
+| **2** | Depo Dünyası & Fizik | 🟢 **Tamamlandı** | 2 / 2 | 100% ✅ |
 | **3** | Tek Robot URDF & TF | 🟡 Bekliyor | 0 / 3 | 0% |
 | **4** | Çoklu Robot & Namespace | 🟡 Bekliyor | 0 / 2 | 0% |
 | **5** | Tek Robot Navigasyon | 🟡 Bekliyor | 0 / 2 | 0% |
@@ -102,4 +102,4 @@
 | **8** | Kraliçe & İşçi MRTA | 🟡 Bekliyor | 0 / 2 | 0% |
 | **9** | Entegrasyon & Logger | 🟡 Bekliyor | 0 / 2 | 0% |
 | **10**| Benchmark & Final | 🟡 Bekliyor | 0 / 2 | 0% |
-| **TOPLAM** | **Colony-OS** | 🟡 **Devam Ediyor** | **6 / 25** | **24%** |
+| **TOPLAM** | **Colony-OS** | 🟡 **Devam Ediyor** | **8 / 25** | **32%** |
