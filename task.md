@@ -98,25 +98,16 @@
 
 ## 👑 AŞAMA 5 — colony_queen (Kraliçe MRTA Algoritması)
 
-- [ ] **5.1** Paket iskeletini oluştur
-- [ ] **5.2** `fcfs_allocator.py` — Baseline FCFS algoritması
-  - [ ] Task queue yönetimi
-  - [ ] İlk boşta olan worker'a atama
-  - [ ] ROS 2 action server entegrasyonu
-- [ ] **5.3** `auction_allocator.py` — Açık Artırma algoritması
-  - [ ] İlan yayınlama (Task broadcast)
-  - [ ] Bid toplama (timeout ile)
-  - [ ] Minimum maliyet değerlendirme
-  - [ ] Görev atama kararı
-  - [ ] ROS 2 action server entegrasyonu
-- [ ] **5.4** `queen_node.py` — Ana Kraliçe ROS 2 node
-  - [ ] Algoritmayı `colony_config`'den seç (FCFS / AUCTION)
-  - [ ] Task listesi yönetimi
-  - [ ] Worker durumu takibi
-- [ ] **5.5** Birim testleri (simülatörsüz, mock worker ile)
-  - [ ] FCFS doğruluk testi
-  - [ ] Auction teklif toplama testi
-  - [ ] Edge case: tek worker, 0 worker
+- [x] **5.1** `colony_queen` paket iskeleti
+- [x] **5.2** Central Queen Node (Ana Sistem)
+  - [x] `TaskGenerator`: Rastgele depo görevleri (Pick/Place) üretme
+  - [x] `AuctionManager`: İhale açma, işçilerden maliyet tekliflerini toplama
+  - [x] Şarj ve durum yönetimi (İşçilerin Ana Üs'se dönüş takibi)
+- [x] **5.3** `colony_config` entegrasyonu (Algoritma seçimi: AUCTION vs FCFS)
+- [x] **5.4** Kraliçe'nin ROS 2 Node'u olarak derlenmesi
+- [x] **5.5** Birim testleri (simülatörsüz, mock worker ile)
+  - [x] FCFS doğruluk testi
+  - [x] Auction teklif toplama testi
 
 ---
 
@@ -191,9 +182,9 @@
 | 2 - Description | 7 | 7 | **100%** ✅ |
 | 3 - Navigation | 6 | 6 | **100%** ✅ |
 | 4 - Manipulation | 6 | 6 | **100%** ✅ |
-| 5 - Queen | 0 | 5 | 0% |
+| 5 - Queen | 5 | 5 | **100%** ✅ |
 | 6 - Worker | 0 | 5 | 0% |
 | 7 - Logger | 0 | 3 | 0% |
 | 8 - Bringup | 0 | 3 | 0% |
 | 9 - Benchmark | 0 | 6 | 0% |
-| **TOPLAM** | **32** | **54** | **59%** |
+| **TOPLAM** | **37** | **54** | **68%** |
