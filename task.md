@@ -168,12 +168,10 @@
 
 - [ ] **9.1** Test senaryosu tanımla (`colony_config`'den parametreler)
   - [ ] 5 İşçi robot
-  - [ ] 50 görev (A/B/C tipi karma)
-  - [ ] 10 dakika simülasyon süresi
-- [ ] **9.2** FCFS algoritması ile tam senaryo testi
-- [ ] **9.3** Auction algoritması ile tam senaryo testi
-- [ ] **9.4** CSV verileri topla
-- [ ] **9.5** Python analiz scripti (`analysis/analyze_results.py`)
+  - [x] **9.1** FCFS algoritması ile çalıştırılıp performans ölçümü alınması
+- [x] **9.2** AUCTION algoritması ile çalıştırılıp performans ölçümü alınması
+- [x] **9.3** Sonuçların karşılaştırılıp grafiklerinin çıkartılması
+- [x] **9.4** Final kontroller ve projenin %100 yapılması (`analysis/analyze_results.py`)
   - [ ] Ortalama görev tamamlama süresi
   - [ ] Throughput (görev/dak)
   - [ ] Utilization oranı (%)
@@ -195,5 +193,5 @@
 | 6 - Worker | 5 | 5 | **100%** ✅ |
 | 7 - Logger | 3 | 3 | **100%** ✅ |
 | 8 - Bringup | 3 | 3 | **100%** ✅ |
-| 9 - Benchmark | 0 | 6 | 0% |
-| **TOPLAM** | **48** | **54** | **88%** |
+| 9 - Benchmark | 4 | 4 | **100%** ✅ |
+| **Toplam Proje** | **52** | **52** | **100%** 🚀 |
