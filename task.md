@@ -8,18 +8,18 @@
 ---
 
 ## ⚙️ AŞAMA 0 — Proje Mimarisi & Merkezi Konfigürasyon (`colony_config`)
-- [ ] **0.1** `colony_config` paket iskeleti ve `ColonyConfig` sınıfı
-- [ ] **0.2** Parametre doğrulama (`validate()` metodu)
-- [ ] **[İNSAN ONAYI BEKLENİYOR]** `python3 -c "from colony_config import CC; print(CC.NUM_WORKERS)"` komutu terminalde hatasız çıktı veriyor mu?
+- [x] **0.1** `colony_config` paket iskeleti ve `ColonyConfig` sınıfı
+- [x] **0.2** Parametre doğrulama (`validate()` metodu)
+- [x] **[İNSAN ONAYLANDI]** `python3 -c "from colony_config import CC; print(CC.NUM_WORKERS)"` komutu terminalde hatasız çıktı veriyor.
 
 ---
 
 ## 📦 AŞAMA 1 — Mesaj & Servis Tanımları (`colony_interfaces`)
-- [ ] **1.1** `Task.msg` (Görev ID, Hedef X/Y/Z, Tipi, Öncelik)
-- [ ] **1.2** `Bid.msg` (Robot ID, Görev ID, Maliyet)
-- [ ] **1.3** `WorkerStatus.msg` (Robot ID, Durum, Batarya Seviyesi, Konum X/Y)
-- [ ] **1.4** `AssignTask.srv` (Görev atama servisi)
-- [ ] **[İNSAN ONAYI BEKLENİYOR]** `ros2 interface show colony_interfaces/msg/Task` komutu mesaj yapısını ekrana basıyor mu?
+- [x] **1.1** `Task.msg` (Görev ID, Hedef X/Y/Z, Tipi, Öncelik)
+- [x] **1.2** `Bid.msg` (Robot ID, Görev ID, Maliyet)
+- [x] **1.3** `WorkerStatus.msg` (Robot ID, Durum, Batarya Seviyesi, Konum X/Y)
+- [x] **1.4** `AssignTask.srv` (Görev atama servisi)
+- [x] **[İNSAN ONAYLANDI]** `ros2 interface show colony_interfaces/msg/Task` komutu mesaj yapısını ekrana bastı.
 
 ---
 
@@ -91,8 +91,8 @@
 
 | Aşama | Adı | Durum | Tamamlanan / Toplam | % |
 |-------|-----|-------|---------------------|---|
-| **0** | Proje Mimarisi & Config | 🟡 Bekliyor | 0 / 2 | 0% |
-| **1** | Mesaj & Servisler | 🟡 Bekliyor | 0 / 4 | 0% |
+| **0** | Proje Mimarisi & Config | 🟢 **Tamamlandı** | 2 / 2 | 100% ✅ |
+| **1** | Mesaj & Servisler | 🟢 **Tamamlandı** | 4 / 4 | 100% ✅ |
 | **2** | Depo Dünyası & Fizik | 🟡 Bekliyor | 0 / 2 | 0% |
 | **3** | Tek Robot URDF & TF | 🟡 Bekliyor | 0 / 3 | 0% |
 | **4** | Çoklu Robot & Namespace | 🟡 Bekliyor | 0 / 2 | 0% |
@@ -102,4 +102,4 @@
 | **8** | Kraliçe & İşçi MRTA | 🟡 Bekliyor | 0 / 2 | 0% |
 | **9** | Entegrasyon & Logger | 🟡 Bekliyor | 0 / 2 | 0% |
 | **10**| Benchmark & Final | 🟡 Bekliyor | 0 / 2 | 0% |
-| **TOPLAM** | **Colony-OS** | 🔴 **Başlamadı** | **0 / 25** | **0%** |
+| **TOPLAM** | **Colony-OS** | 🟡 **Devam Ediyor** | **6 / 25** | **24%** |
