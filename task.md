@@ -81,11 +81,18 @@
 
 ## 🦾 AŞAMA 4 — colony_manipulation (Nesne Alma/Bırakma)
 
-- [ ] **4.1** MoveIt 2 konfigürasyonu (SRDF, kinematics.yaml)
-- [ ] **4.2** Temel pick & place motioni testi
-- [ ] **4.3** Simüle gripper (nesneyi attach/detach etme)
-- [ ] **4.4** Pick & place action client helper yazma
-- [ ] **4.5** Nav2 + MoveIt entegrasyonu (robotic pipeline testi)
+- [x] **4.1** `colony_manipulation` paket iskeleti
+- [x] **4.2** URDF Güncellemesi (Husky + Basit Kol)
+  - [x] 3-DOF Kol + Gripper tasarımı (Xacro)
+  - [x] Gazebo ros2_control (JointTrajectoryController) eklentisi
+- [x] **4.3** MoveIt 2 konfigürasyonu
+  - [x] SRDF (Semantic Robot Description Format) oluşturma
+  - [x] kinematics.yaml (KDL Kinematics)
+  - [x] joint_limits.yaml
+  - [x] controllers.yaml (ros2_control ile bağlantı)
+- [x] **4.4** MoveIt 2 Launch dosyası (`move_group.launch.py`)
+- [x] **4.5** Pick / Place test scripti (Python MoveIt komutları)
+- [x] **4.6** Nav2 + MoveIt entegrasyonu (robotic pipeline testi)
 
 ---
 
@@ -183,10 +190,10 @@
 | 1 - Interfaces | 7 | 7 | **100%** ✅ |
 | 2 - Description | 7 | 7 | **100%** ✅ |
 | 3 - Navigation | 6 | 6 | **100%** ✅ |
-| 4 - Manipulation | 0 | 5 | 0% |
+| 4 - Manipulation | 6 | 6 | **100%** ✅ |
 | 5 - Queen | 0 | 5 | 0% |
 | 6 - Worker | 0 | 5 | 0% |
 | 7 - Logger | 0 | 3 | 0% |
 | 8 - Bringup | 0 | 3 | 0% |
 | 9 - Benchmark | 0 | 6 | 0% |
-| **TOPLAM** | **26** | **53** | **49%** |
+| **TOPLAM** | **32** | **54** | **59%** |
