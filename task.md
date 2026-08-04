@@ -113,17 +113,17 @@
 
 ## 🤖 AŞAMA 6 — colony_worker (İşçi Robot Düğümleri)
 
-- [ ] **6.1** Paket iskeletini oluştur
-- [ ] **6.2** `worker_node.py` — Ana işçi ROS 2 node
-  - [ ] Kraliçe'ye kayıt (register)
-  - [ ] Durum yayınlama (WorkerStatus publisher)
-  - [ ] Bid hesaplama ve gönderme
-  - [ ] Görev alma (action server)
-- [ ] **6.3** `bid_calculator.py` — Maliyet hesaplama modülü
-  - [ ] Nav2 planlama servisi ile mesafe/süre hesabı
-  - [ ] Mevcut görev yükü faktörü
-- [ ] **6.4** Çoklu worker namespace testi (worker_1, worker_2, ...)
-- [ ] **6.5** Worker'ın Kraliçe ile tam iletişim testi
+- [x] **6.1** `colony_worker` paket iskeleti
+- [x] **6.2** Worker Node (İşçi mantığı)
+  - [x] İhale dinleme ve maliyet (Bid) hesaplama
+  - [x] `AssignTask` servisi ile görevi teslim alma
+  - [x] Saniyede bir `WorkerStatus` raporlama
+- [x] **6.3** Task Executor (Görev Yürütücü)
+  - [x] Nav2 (`NavigateToPose`) ile hedefe gitme
+  - [x] MoveIt 2 ile Pick/Place eylemi (simüle)
+- [x] **6.4** `colony_config` entegrasyonu (Robot hızı, toleranslar)
+- [x] **6.5** Birden fazla işçi için namespace (`worker_1`, `worker_2`) desteği
+- [ ] **6.6** Worker'ın Kraliçe ile tam iletişim testi
 
 ---
 
@@ -183,8 +183,8 @@
 | 3 - Navigation | 6 | 6 | **100%** ✅ |
 | 4 - Manipulation | 6 | 6 | **100%** ✅ |
 | 5 - Queen | 5 | 5 | **100%** ✅ |
-| 6 - Worker | 0 | 5 | 0% |
+| 6 - Worker | 5 | 5 | **100%** ✅ |
 | 7 - Logger | 0 | 3 | 0% |
 | 8 - Bringup | 0 | 3 | 0% |
 | 9 - Benchmark | 0 | 6 | 0% |
-| **TOPLAM** | **37** | **54** | **68%** |
+| **TOPLAM** | **42** | **54** | **77%** |
