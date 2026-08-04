@@ -31,10 +31,10 @@
 ---
 
 ## 🤖 AŞAMA 3 — Tek Robot URDF & Fiziksel Doğrulama
-- [ ] **3.1** İşçi Robot URDF/Xacro (Husky şasi + 3-DOF Robot Kolu + Lidar)
-- [ ] **3.2** Gazebo DiffDrive, Lidar ve ROS 2 Control eklentilerinin tanımı
-- [ ] **3.3** Tek robotu başlatan `single_robot.launch.py`
-- [ ] **[İNSAN ONAYI BEKLENİYOR]** Gazebo ve RViz'de robot parçaları (tekerlekler, kol) titrameden/kopmadan sabit duruyor mu?
+- [x] **3.1** İşçi Robot URDF/Xacro (Husky şasi + 3-DOF Robot Kolu + Lidar)
+- [x] **3.2** Gazebo DiffDrive, Lidar ve ROS 2 Control eklentilerinin tanımı
+- [x] **3.3** Tek robotu başlatan `single_robot.launch.py`
+- [x] **[İNSAN ONAYLANDI]** Gazebo ve RViz'de robot parçaları titrameden sabit duruyor. Topic izolasyonu (`/worker_1/scan`, `/worker_1/odom` vb.) tamam.
 
 ---
 
@@ -94,7 +94,7 @@
 | **0** | Proje Mimarisi & Config | 🟢 **Tamamlandı** | 2 / 2 | 100% ✅ |
 | **1** | Mesaj & Servisler | 🟢 **Tamamlandı** | 4 / 4 | 100% ✅ |
 | **2** | Depo Dünyası & Fizik | 🟢 **Tamamlandı** | 2 / 2 | 100% ✅ |
-| **3** | Tek Robot URDF & TF | 🟡 Bekliyor | 0 / 3 | 0% |
+| **3** | Tek Robot URDF & TF | 🟢 **Tamamlandı** | 3 / 3 | 100% ✅ |
 | **4** | Çoklu Robot & Namespace | 🟡 Bekliyor | 0 / 2 | 0% |
 | **5** | Tek Robot Navigasyon | 🟡 Bekliyor | 0 / 2 | 0% |
 | **6** | Çoklu Robot Navigasyon | 🟡 Bekliyor | 0 / 2 | 0% |
@@ -102,4 +102,4 @@
 | **8** | Kraliçe & İşçi MRTA | 🟡 Bekliyor | 0 / 2 | 0% |
 | **9** | Entegrasyon & Logger | 🟡 Bekliyor | 0 / 2 | 0% |
 | **10**| Benchmark & Final | 🟡 Bekliyor | 0 / 2 | 0% |
-| **TOPLAM** | **Colony-OS** | 🟡 **Devam Ediyor** | **8 / 25** | **32%** |
+| **TOPLAM** | **Colony-OS** | 🟡 **Devam Ediyor** | **11 / 25** | **44%** |
