@@ -66,16 +66,16 @@
 
 ## 🧭 AŞAMA 3 — colony_navigation (İşçi Navigasyonu)
 
-- [ ] **3.1** Nav2 bringup kurulumu ve test
-- [ ] **3.2** `nav2_params.yaml` konfigürasyonu
-  - [ ] AMCL (localization) parametreleri
-  - [ ] Planner (NavFn) parametreleri
-  - [ ] Controller (DWB) parametreleri
-  - [ ] Costmap parametreleri (global + local)
-- [ ] **3.3** Harita oluşturma (statik `/map` topic veya map_server)
-- [ ] **3.4** Tek robot otonom navigasyon testi (hedefe gitme)
-- [ ] **3.5** Dinamik engelden kaçınma testi (birden fazla robot)
-- [ ] **3.6** `NavigateToPose` action ile programatik hedef gönderme
+- [x] **3.1** Nav2 bringup kurulumu ve test
+- [x] **3.2** `nav2_params.yaml` konfigürasyonu
+  - [x] AMCL (localization) parametreleri
+  - [x] Planner (NavFn) parametreleri
+  - [x] Controller (DWB) parametreleri
+  - [x] Costmap parametreleri (global + local)
+- [x] **3.3** Harita oluşturma (statik `/map` topic veya map_server)
+- [x] **3.4** Tek robot otonom navigasyon testi (hedefe gitme)
+- [x] **3.5** Dinamik engelden kaçınma testi (birden fazla robot)
+- [x] **3.6** `NavigateToPose` action ile programatik hedef gönderme
 
 ---
 
@@ -182,11 +182,11 @@
 | 0 - Altyapı | 6 | 6 | **100%** ✅ |
 | 1 - Interfaces | 7 | 7 | **100%** ✅ |
 | 2 - Description | 7 | 7 | **100%** ✅ |
-| 3 - Navigation | 0 | 6 | 0% |
+| 3 - Navigation | 6 | 6 | **100%** ✅ |
 | 4 - Manipulation | 0 | 5 | 0% |
 | 5 - Queen | 0 | 5 | 0% |
 | 6 - Worker | 0 | 5 | 0% |
 | 7 - Logger | 0 | 3 | 0% |
 | 8 - Bringup | 0 | 3 | 0% |
 | 9 - Benchmark | 0 | 6 | 0% |
-| **TOPLAM** | **20** | **53** | **37%** |
+| **TOPLAM** | **26** | **53** | **49%** |
