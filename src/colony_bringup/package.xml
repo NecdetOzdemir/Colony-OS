@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>colony_bringup</name>
+  <version>0.1.0</version>
+  <description>Colony-OS Bringup package to launch the entire system</description>
+  <maintainer email="colony-os@example.com">Colony-OS Team</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  
+  <exec_depend>colony_config</exec_depend>
+  <exec_depend>colony_description</exec_depend>
+  <exec_depend>colony_navigation</exec_depend>
+  <exec_depend>colony_manipulation</exec_depend>
+  <exec_depend>colony_queen</exec_depend>
+  <exec_depend>colony_worker</exec_depend>
+  <exec_depend>colony_logger</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

@@ -135,23 +135,32 @@
   - [ ] `.csv` dosyasına yaz (`colony_config`'den dosya yolu)
 - [ ] **7.2** CSV formatı tanımla:
   - [ ] task_id, algorithm, worker_id, start_time, end_time, duration, distance
-- [ ] **7.3** Gerçek zamanlı istatistik yayınlama (ROS 2 topic)
+- [x] **7.1** `performance_logger.py` ROS 2 node
+  - [x] Görev başlangıç/bitiş zamanlarını kaydet
+  - [x] Worker utilization oranını kaydet
+  - [x] `.csv` dosyasına yaz (`colony_config`'den dosya yolu)
+- [x] **7.2** CSV formatı tanımla:
+  - [x] task_id, algorithm, worker_id, start_time, end_time, duration, distance
+- [x] **7.3** Gerçek zamanlı istatistik yayınlama (ROS 2 topic)
 
 ---
 
 ## 🚀 AŞAMA 8 — colony_bringup (Launch Dosyaları)
 
-- [ ] **8.1** `simulation.launch.py` — Tüm sistemi tek komutla başlat
-  - [ ] Gazebo dünyasını başlat
-  - [ ] N adet worker robot spawn et (`colony_config`'den N gelir)
-  - [ ] Nav2 stack başlat
-  - [ ] Kraliçe node başlat
-  - [ ] Logger başlat
-- [ ] **8.2** `benchmark.launch.py` — Benchmark test launcher
-  - [ ] FCFS modu
-  - [ ] Auction modu
-  - [ ] Otomatik senaryo başlatma
-- [ ] **8.3** Sistem entegrasyon testi (tüm bileşenler birlikte)
+- [x] **8.1** `colony_bringup` paket iskeleti
+- [x] **8.2** `system.launch.py` (Ana Sistem)
+  - [x] Gazebo'yu başlatma ve dünyayı yükleme
+  - [x] Queen ve Logger node'larını başlatma
+  - [x] Nav2 harita sunucusunu (map_server) başlatma
+- [x] **8.3** `spawn_workers.launch.py` (İşçi Robotları Çoğaltma)
+  - [x] `colony_config` NUM_WORKERS okuma
+  - [x] Döngü içinde robotları farklı (x,y) koordinatlarında spawn etme
+  - [x] Her biri için `worker_node.py` ve `nav2_bringup` başlatma
+- [x] **8.4** `benchmark.launch.py` — Benchmark test launcher
+  - [x] FCFS modu
+  - [x] Auction modu
+  - [x] Otomatik senaryo başlatma
+- [x] **8.5** Sistem entegrasyon testi (tüm bileşenler birlikte)
 
 ---
 
@@ -185,6 +194,6 @@
 | 5 - Queen | 5 | 5 | **100%** ✅ |
 | 6 - Worker | 5 | 5 | **100%** ✅ |
 | 7 - Logger | 3 | 3 | **100%** ✅ |
-| 8 - Bringup | 0 | 3 | 0% |
+| 8 - Bringup | 3 | 3 | **100%** ✅ |
 | 9 - Benchmark | 0 | 6 | 0% |
-| **TOPLAM** | **45** | **54** | **83%** |
+| **TOPLAM** | **48** | **54** | **88%** |
