@@ -1,0 +1,19 @@
+# Colony-OS Proje Dizinleri
+build/
+install/
+log/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Benchmark Çıktıları (büyük dosyalar)
+results/*.csv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
