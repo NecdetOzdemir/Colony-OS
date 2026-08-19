@@ -12,8 +12,8 @@
 ### 👉 **[task.md — Görev Listesi & İlerleme](./task.md)**
 
 ```
-4 / 58 görev tamamlandı  (%7)
-████░░░░░░░░░░░░░░░░░░░░  Devam Ediyor
+19 / 25 görev tamamlandı  (%76)
+███████████████████░░░░░  Devam Ediyor
 ```
 
 ---
@@ -28,7 +28,7 @@ source /opt/ros/humble/setup.bash
 colcon build --packages-select colony_config colony_interfaces
 
 # 3. Tüm paketi derle
-colcon build
+colcon build --symlink-install
 
 # 4. Ortamı aktifleştir
 source install/setup.bash
@@ -54,7 +54,7 @@ Colony-OS/
 │   ├── colony_queen/        ← 👑  Kraliçe MRTA algoritması (ANA KATKI)
 │   ├── colony_worker/       ← 🤖  İşçi robot düğümleri
 │   ├── colony_navigation/   ← 🧭  Nav2 konfigürasyonu
-│   ├── colony_manipulation/ ← 🦾  MoveIt 2 konfigürasyonu
+│   ├── colony_moveit_config/← 🦾  MoveIt 2 konfigürasyonu
 │   ├── colony_logger/       ← 📊  Performans kaydedici
 │   └── colony_bringup/      ← 🚀  Launch dosyaları
 ├── results/                 ← 📁  Benchmark CSV çıktıları
