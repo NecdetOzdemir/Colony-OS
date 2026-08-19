@@ -41,7 +41,7 @@ class ColonyConfig:
     # ─────────────────────────────────────────
     #  ROBOT FILOSU
     # ─────────────────────────────────────────
-    NUM_WORKERS: int = 5                    # Kaç tane İşçi robot
+    NUM_WORKERS: int = 1                    # Kaç tane İşçi robot
     WORKER_NAMESPACE: str = "worker"        # worker_1, worker_2, ...
     WORKER_MAX_SPEED: float = 0.5           # m/s — mobil taban max hız
     WORKER_MAX_ANGULAR_SPEED: float = 1.0   # rad/s

@@ -264,7 +264,12 @@
 
   <gazebo>
     <plugin filename="ign_ros2_control-system" name="ign_ros2_control::IgnitionROS2ControlPlugin">
-      <parameters>$(find colony_manipulation)/config/controllers.yaml</parameters>
+      <parameters>$(find colony_bringup)/config/ros2_controllers.yaml</parameters>
+      <ros>
+        <namespace>$(arg robot_name)</namespace>
+      </ros>
+      <robot_param>robot_description</robot_param>
+      <robot_param_node>robot_state_publisher</robot_param_node>
     </plugin>
   </gazebo>
 

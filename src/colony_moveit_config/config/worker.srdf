@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This does not replace URDF, and is not an extension of URDF.
+    This is a format for representing semantic information about the robot structure.
+    A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
+-->
+<robot name="worker">
+    <!--GROUPS: Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
+    <group name="arm">
+        <chain base_link="arm_base_link" tip_link="gripper_link"/>
+    </group>
+
+    <!-- Dummy gripper group to prevent MoveIt from crashing and to decouple from arm -->
+    <group name="gripper">
+        <link name="gripper_link"/>
+    </group>
+    
+    <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
+    <end_effector name="gripper" parent_link="forearm_link" group="gripper" parent_group="arm"/>
+    
+    <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference-->
+    <virtual_joint name="virtual_joint" type="fixed" parent_frame="worker_1/odom" child_link="base_link"/>
+
+    <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
+    <disable_collisions link1="base_link" link2="left_wheel" reason="Adjacent"/>
+    <disable_collisions link1="base_link" link2="right_wheel" reason="Adjacent"/>
+    <disable_collisions link1="base_link" link2="front_caster" reason="Adjacent"/>
+    <disable_collisions link1="base_link" link2="rear_caster" reason="Adjacent"/>
+    <disable_collisions link1="base_link" link2="lidar_link" reason="Adjacent"/>
+    <disable_collisions link1="base_link" link2="arm_base_link" reason="Adjacent"/>
+    
+    <disable_collisions link1="base_link" link2="shoulder_link" reason="Adjacent"/>
+    <disable_collisions link1="arm_base_link" link2="shoulder_link" reason="Adjacent"/>
+    <disable_collisions link1="shoulder_link" link2="upper_arm_link" reason="Adjacent"/>
+    <disable_collisions link1="arm_base_link" link2="upper_arm_link" reason="Adjacent"/>
+    <disable_collisions link1="upper_arm_link" link2="forearm_link" reason="Adjacent"/>
+    <disable_collisions link1="forearm_link" link2="gripper_link" reason="Adjacent"/>
+
+    <disable_collisions link1="lidar_link" link2="arm_base_link" reason="Never"/>
+    <disable_collisions link1="left_wheel" link2="right_wheel" reason="Never"/>
+</robot>

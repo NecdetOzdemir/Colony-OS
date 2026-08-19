@@ -1,0 +1,444 @@
+[INFO] [launch]: All log files can be found below /home/necdet/.ros/log/2026-08-11-14-28-58-425662-necdet-IdeaPad-Gaming-3-15ACH6-11556
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [ign-1]: process started with pid [11569]
+[INFO] [parameter_bridge-2]: process started with pid [11571]
+[INFO] [queen-3]: process started with pid [11573]
+[INFO] [logger-4]: process started with pid [11575]
+[INFO] [map_server-5]: process started with pid [11577]
+[INFO] [amcl-6]: process started with pid [11579]
+[INFO] [rviz2-7]: process started with pid [11581]
+[INFO] [robot_state_publisher-8]: process started with pid [11596]
+[INFO] [create-9]: process started with pid [11599]
+[INFO] [parameter_bridge-10]: process started with pid [11603]
+[INFO] [worker-11]: process started with pid [11606]
+[rviz2-7] Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway.
+[amcl-6] [INFO] [1786447739.308652325] [amcl]: 
+[amcl-6] 	amcl lifecycle node launched. 
+[amcl-6] 	Waiting on external lifecycle transitions to activate
+[amcl-6] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[amcl-6] [INFO] [1786447739.310214696] [amcl]: Creating
+[map_server-5] [INFO] [1786447739.313537731] [map_server]: 
+[map_server-5] 	map_server lifecycle node launched. 
+[map_server-5] 	Waiting on external lifecycle transitions to activate
+[map_server-5] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[map_server-5] [INFO] [1786447739.315447796] [map_server]: Creating
+[parameter_bridge-2] [INFO] [1786447739.321868290] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/clock (ignition.msgs.Clock) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)
+[create-9] [INFO] [1786447739.498555040] [ros_gz_sim]: Requesting list of world names.
+[robot_state_publisher-8] [WARN] [1786447739.504847824] [kdl_parser]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+[robot_state_publisher-8] [INFO] [1786447739.505004529] [worker_1.robot_state_publisher]: got segment arm_base_link
+[robot_state_publisher-8] [INFO] [1786447739.505077135] [worker_1.robot_state_publisher]: got segment base_link
+[robot_state_publisher-8] [INFO] [1786447739.505088667] [worker_1.robot_state_publisher]: got segment forearm_link
+[robot_state_publisher-8] [INFO] [1786447739.505097774] [worker_1.robot_state_publisher]: got segment front_caster
+[robot_state_publisher-8] [INFO] [1786447739.505106761] [worker_1.robot_state_publisher]: got segment gripper_link
+[robot_state_publisher-8] [INFO] [1786447739.505114916] [worker_1.robot_state_publisher]: got segment left_wheel
+[robot_state_publisher-8] [INFO] [1786447739.505123032] [worker_1.robot_state_publisher]: got segment lidar_link
+[robot_state_publisher-8] [INFO] [1786447739.505130856] [worker_1.robot_state_publisher]: got segment rear_caster
+[robot_state_publisher-8] [INFO] [1786447739.505139302] [worker_1.robot_state_publisher]: got segment right_wheel
+[robot_state_publisher-8] [INFO] [1786447739.505147598] [worker_1.robot_state_publisher]: got segment shoulder_link
+[robot_state_publisher-8] [INFO] [1786447739.505155864] [worker_1.robot_state_publisher]: got segment upper_arm_link
+[parameter_bridge-10] [INFO] [1786447739.582454671] [worker_1.ros_gz_bridge]: Creating GZ->ROS Bridge: [/worker_1/scan (ignition.msgs.LaserScan) -> /worker_1/scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[parameter_bridge-10] [INFO] [1786447739.596661460] [worker_1.ros_gz_bridge]: Creating ROS->GZ Bridge: [/model/worker_1/cmd_vel (geometry_msgs/msg/Twist) -> /model/worker_1/cmd_vel (ignition.msgs.Twist)] (Lazy 0)
+[parameter_bridge-10] [INFO] [1786447739.614556692] [worker_1.ros_gz_bridge]: Creating GZ->ROS Bridge: [/model/worker_1/odometry (ignition.msgs.Odometry) -> /model/worker_1/odometry (nav_msgs/msg/Odometry)] (Lazy 0)
+[parameter_bridge-10] [INFO] [1786447739.632951263] [worker_1.ros_gz_bridge]: Creating GZ->ROS Bridge: [/model/worker_1/tf (ignition.msgs.Pose_V) -> /model/worker_1/tf (tf2_msgs/msg/TFMessage)] (Lazy 0)
+[ign-1] Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway.
+[create-9] [INFO] [1786447739.718679857] [ros_gz_sim]: Waiting messages on topic [/worker_1/robot_description].
+[create-9] [INFO] [1786447739.762439178] [ros_gz_sim]: Requested creation of entity.
+[create-9] [INFO] [1786447739.762493540] [ros_gz_sim]: OK creation of entity.
+[logger-4] [INFO] [1786447739.951257992] [data_logger_node]: 📊 Data Logger (Veri Toplayıcı) Başlatıldı!
+[queen-3] [INFO] [1786447740.020314707] [queen_node]: 👑 Queen Node (Ana Üs) Başlatıldı!
+[queen-3] [INFO] [1786447740.021122798] [queen_node]: Seçili Algoritma: AUCTION
+[INFO] [create-9]: process has finished cleanly [pid 11599]
+[rviz2-7] [INFO] [1786447740.384719440] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-7] [INFO] [1786447740.385029523] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[worker-11] [INFO] [1786447740.394921351] [worker_1.worker_node]: 🤖 worker_1 (İşçi Robot) Başlatıldı!
+[rviz2-7] [INFO] [1786447740.422383729] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-7] Warning: class_loader.impl: SEVERE WARNING!!! A namespace collision has occurred with plugin factory for class rviz_default_plugins::displays::InteractiveMarkerDisplay. New factory will OVERWRITE existing one. This situation occurs when libraries containing plugins are directly linked against an executable (the one running right now generating this message). Please separate plugins out into their own library or just don't link against the library and use either class_loader::ClassLoader/MultiLibraryClassLoader to open.
+[rviz2-7]          at line 253 in /opt/ros/humble/include/class_loader/class_loader/class_loader_core.hpp
+[worker-11] Traceback (most recent call last):
+[worker-11]   File "/home/necdet/Colony-OS/install/colony_worker/lib/colony_worker/worker", line 33, in <module>
+[worker-11]     sys.exit(load_entry_point('colony-worker', 'console_scripts', 'worker')())
+[worker-11]   File "/home/necdet/Colony-OS/build/colony_worker/colony_worker/worker_node.py", line 147, in main
+[worker-11]     rclpy.spin(node)
+[worker-11]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 229, in spin
+[worker-11]     executor.spin_once()
+[worker-11]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 808, in spin_once
+[worker-11]     self._spin_once_impl(timeout_sec)
+[worker-11]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 805, in _spin_once_impl
+[worker-11]     raise handler.exception()
+[worker-11]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 272, in _execute_coroutine_step
+[worker-11]     result = coro.send(None)
+[worker-11]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 488, in handler
+[worker-11]     await call_coroutine(entity, arg)
+[worker-11]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 407, in _execute_subscription
+[worker-11]     await await_or_execute(sub.callback, msg)
+[worker-11]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 110, in await_or_execute
+[worker-11]     return callback(*args)
+[worker-11]   File "/home/necdet/Colony-OS/build/colony_worker/colony_worker/worker_node.py", line 70, in auction_callback
+[worker-11]     cost = distance / CC.MAX_VELOCITY
+[worker-11] AttributeError: type object 'ColonyConfig' has no attribute 'MAX_VELOCITY'
+[ERROR] [worker-11]: process has died [pid 11606, exit code 1, cmd '/home/necdet/Colony-OS/install/colony_worker/lib/colony_worker/worker --ros-args -r __node:=worker_node -r __ns:=/worker_1 --params-file /tmp/launch_params__iyarx0m'].
+[rviz2-7] [ERROR] [1786447743.866888666] [moveit_ros_visualization.motion_planning_frame]: Action server: /recognize_objects not available
+[rviz2-7] [INFO] [1786447743.922861776] [moveit_ros_visualization.motion_planning_frame]: MoveGroup namespace changed: / -> . Reloading params.
+[rviz2-7] [INFO] [1786447743.936110983] [moveit_ros_visualization.motion_planning_frame]: MoveGroup namespace changed: / -> worker_1. Reloading params.
+[rviz2-7] [INFO] [1786447743.949649965] [moveit_ros_visualization.motion_planning_frame]: MoveGroup namespace changed: / -> worker_1. Reloading params.
+[INFO] [lifecycle_manager-12]: process started with pid [11853]
+[INFO] [spawner-13]: process started with pid [11866]
+[rviz2-7] [ERROR] [1786447744.242393821] [moveit_background_processing.background_processing]: Exception caught while processing action 'loadRobotModel': Invalid node name: node name must not contain characters other than alphanumerics or '_':
+[rviz2-7]   'rviz2_ssp_/worker_1/robot_description '
+[rviz2-7]              ^
+[rviz2-7] 
+[lifecycle_manager-12] [INFO] [1786447744.243633845] [lifecycle_manager_map]: Creating
+[lifecycle_manager-12] [INFO] [1786447744.247954067] [lifecycle_manager_map]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[rviz2-7] [ERROR] [1786447744.315113370] [moveit_background_processing.background_processing]: Exception caught while processing action 'loadRobotModel': Invalid node name: node name must not contain characters other than alphanumerics or '_':
+[rviz2-7]   'rviz2_ssp_/worker_1/robot_description '
+[rviz2-7]              ^
+[rviz2-7] 
+[rviz2-7] [INFO] [1786447744.338723648] [rviz2]: Trying to create a map of size 400 x 300 using 1 swatches
+[rviz2-7] [ERROR] [1786447744.344455356] [rviz2]: Vertex Program:rviz/glsl120/indexed_8bit_image.vert Fragment Program:rviz/glsl120/indexed_8bit_image.frag GLSL link result : 
+[rviz2-7] active samplers with a different type refer to the same texture image unit
+[rviz2-7] [ERROR] [1786447744.407310669] [moveit_background_processing.background_processing]: Exception caught while processing action 'loadRobotModel': Invalid node name: node name must not contain characters other than alphanumerics or '_':
+[rviz2-7]   'rviz2_ssp_/worker_1/robot_description '
+[rviz2-7]              ^
+[rviz2-7] 
+[ign-1] libEGL warning: Not allowed to force software rendering when API explicitly selects a hardware device.
+[ign-1] libEGL warning: egl: failed to create dri2 screen
+[ign-1] libEGL warning: Not allowed to force software rendering when API explicitly selects a hardware device.
+[ign-1] amdgpu_device_initialize: amdgpu_query_info(ACCEL_WORKING) failed (-13)
+[ign-1] amdgpu: amdgpu_device_initialize failed.
+[ign-1] libEGL warning: egl: failed to create dri2 screen
+[rviz2-7] [INFO] [1786447744.823252471] [rviz2]: Message Filter dropping message: frame 'worker_1/lidar_link' at time 43.800 for reason 'discarding message because the queue is full'
+[spawner-13] [INFO] [1786447745.002304834] [spawner_joint_state_broadcaster]: waiting for service /worker_1/controller_manager/list_controllers to become available...
+[INFO] [spawner-14]: process started with pid [11947]
+[lifecycle_manager-12] [INFO] [1786447745.287073650] [lifecycle_manager_map]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-12] [INFO] [1786447745.287161816] [lifecycle_manager_map]: [34m[1mConfiguring map_server[0m[0m
+[map_server-5] [INFO] [1786447745.288096626] [map_server]: Configuring
+[map_server-5] [INFO] [1786447745.288217723] [map_io]: Loading yaml file: /home/necdet/Colony-OS/install/colony_navigation/share/colony_navigation/maps/warehouse.yaml
+[map_server-5] [INFO] [1786447745.288692036] [map_io]: resolution: 0.05
+[map_server-5] [INFO] [1786447745.288714218] [map_io]: origin[0]: -10
+[map_server-5] [INFO] [1786447745.288723455] [map_io]: origin[1]: -7.5
+[map_server-5] [INFO] [1786447745.288731671] [map_io]: origin[2]: 0
+[map_server-5] [INFO] [1786447745.288740367] [map_io]: free_thresh: 0.196
+[map_server-5] [INFO] [1786447745.288748733] [map_io]: occupied_thresh: 0.65
+[map_server-5] [INFO] [1786447745.288758621] [map_io]: mode: trinary
+[map_server-5] [INFO] [1786447745.288768821] [map_io]: negate: 0
+[map_server-5] [INFO] [1786447745.289052645] [map_io]: Loading image_file: /home/necdet/Colony-OS/install/colony_navigation/share/colony_navigation/maps/warehouse.pgm
+[lifecycle_manager-12] [ERROR] [1786447745.289378929] [lifecycle_manager_map]: Failed to change state for node: map_server
+[lifecycle_manager-12] [ERROR] [1786447745.289468598] [lifecycle_manager_map]: Failed to bring up all requested nodes. Aborting bringup.
+[map_server-5] [INFO] [1786447745.307853511] [map_io]: Read map /home/necdet/Colony-OS/install/colony_navigation/share/colony_navigation/maps/warehouse.pgm: 400 X 300 map @ 0.05 m/cell
+[spawner-14] [INFO] [1786447746.353817557] [spawner_arm_controller]: waiting for service /worker_1/controller_manager/list_controllers to become available...
+[INFO] [controller_server-15]: process started with pid [11979]
+[INFO] [smoother_server-16]: process started with pid [11981]
+[INFO] [planner_server-17]: process started with pid [11983]
+[INFO] [behavior_server-18]: process started with pid [11985]
+[INFO] [bt_navigator-19]: process started with pid [11987]
+[INFO] [waypoint_follower-20]: process started with pid [11989]
+[INFO] [velocity_smoother-21]: process started with pid [11991]
+[INFO] [lifecycle_manager-22]: process started with pid [11993]
+[INFO] [move_group-23]: process started with pid [12083]
+[controller_server-15] [INFO] [1786447748.423696318] [controller_server]: 
+[controller_server-15] 	controller_server lifecycle node launched. 
+[controller_server-15] 	Waiting on external lifecycle transitions to activate
+[controller_server-15] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-15] [INFO] [1786447748.482533659] [controller_server]: Creating controller server
+[smoother_server-16] [INFO] [1786447748.297180006] [smoother_server]: 
+[smoother_server-16] 	smoother_server lifecycle node launched. 
+[smoother_server-16] 	Waiting on external lifecycle transitions to activate
+[smoother_server-16] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[smoother_server-16] [INFO] [1786447748.321127379] [smoother_server]: Creating smoother server
+[planner_server-17] [INFO] [1786447748.092826644] [planner_server]: 
+[planner_server-17] 	planner_server lifecycle node launched. 
+[planner_server-17] 	Waiting on external lifecycle transitions to activate
+[planner_server-17] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-17] [INFO] [1786447748.118223294] [planner_server]: Creating
+[behavior_server-18] [INFO] [1786447748.080417788] [behavior_server]: 
+[behavior_server-18] 	behavior_server lifecycle node launched. 
+[behavior_server-18] 	Waiting on external lifecycle transitions to activate
+[behavior_server-18] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[bt_navigator-19] [INFO] [1786447748.669400790] [bt_navigator]: 
+[bt_navigator-19] 	bt_navigator lifecycle node launched. 
+[bt_navigator-19] 	Waiting on external lifecycle transitions to activate
+[bt_navigator-19] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[bt_navigator-19] [INFO] [1786447748.669606908] [bt_navigator]: Creating
+[waypoint_follower-20] [INFO] [1786447748.012393507] [waypoint_follower]: 
+[waypoint_follower-20] 	waypoint_follower lifecycle node launched. 
+[waypoint_follower-20] 	Waiting on external lifecycle transitions to activate
+[waypoint_follower-20] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[waypoint_follower-20] [INFO] [1786447748.018531129] [waypoint_follower]: Creating
+[velocity_smoother-21] [INFO] [1786447748.289884405] [velocity_smoother]: 
+[velocity_smoother-21] 	velocity_smoother lifecycle node launched. 
+[velocity_smoother-21] 	Waiting on external lifecycle transitions to activate
+[velocity_smoother-21] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[lifecycle_manager-22] [INFO] [1786447748.024635037] [lifecycle_manager_navigation]: Creating
+[lifecycle_manager-22] [INFO] [1786447748.076417319] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[move_group-23] [WARN] [1786447749.152717682] [move_group.move_group]: Falling back to using the the move_group node namespace (deprecated behavior).
+[move_group-23] [INFO] [1786447749.382278268] [moveit_rdf_loader.rdf_loader]: Loaded robot model in 46.803 seconds
+[move_group-23] [INFO] [1786447749.382341147] [moveit_robot_model.robot_model]: Loading robot model 'worker'...
+[move_group-23] [INFO] [1786447749.382355063] [moveit_robot_model.robot_model]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[move_group-23] [WARN] [1786447749.382539039] [moveit_robot_model.robot_model]: Could not identify parent group for end-effector 'gripper'
+[move_group-23] [WARN] [1786447749.416869624] [kdl_parser]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+[move_group-23] [WARN] [1786447749.424520735] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.424594033] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.466419464] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.466459510] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.475672059] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.475776455] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.477989441] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.478015930] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.543342775] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.543395655] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.566674018] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.566712370] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.573622285] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.573647262] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.576337416] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.576373814] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.594236254] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.594271009] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.609033895] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.609083038] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.626533542] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.626573647] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.648447517] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.648482684] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.655594088] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.655668588] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.673668757] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.673705196] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.697762225] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.697799455] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[planner_server-17] [INFO] [1786447749.701695808] [global_costmap.global_costmap]: 
+[planner_server-17] 	global_costmap lifecycle node launched. 
+[planner_server-17] 	Waiting on external lifecycle transitions to activate
+[planner_server-17] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-17] [INFO] [1786447749.702859749] [global_costmap.global_costmap]: Creating Costmap
+[move_group-23] [WARN] [1786447749.780006260] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.780043159] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [INFO] [1786447749.821806354] [local_costmap.local_costmap]: 
+[controller_server-15] 	local_costmap lifecycle node launched. 
+[controller_server-15] 	Waiting on external lifecycle transitions to activate
+[controller_server-15] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-15] [INFO] [1786447749.823595631] [local_costmap.local_costmap]: Creating Costmap
+[move_group-23] [WARN] [1786447749.816475601] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.894658482] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[lifecycle_manager-22] [INFO] [1786447749.967238508] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-22] [INFO] [1786447749.967331233] [lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[controller_server-15] [INFO] [1786447749.970206925] [controller_server]: Configuring controller interface
+[controller_server-15] [INFO] [1786447749.973103437] [controller_server]: getting goal checker plugins..
+[controller_server-15] [INFO] [1786447749.973833821] [controller_server]: Controller frequency set to 20.0000Hz
+[controller_server-15] [INFO] [1786447749.973917840] [local_costmap.local_costmap]: Configuring
+[lifecycle_manager-22] [ERROR] [1786447749.981467760] [lifecycle_manager_navigation]: Failed to change state for node: controller_server
+[lifecycle_manager-22] [ERROR] [1786447749.981597895] [lifecycle_manager_navigation]: Failed to bring up all requested nodes. Aborting bringup.
+[move_group-23] [WARN] [1786447749.994725062] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447749.994764797] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [INFO] [1786447750.013698202] [moveit.ros_planning_interface.moveit_cpp]: Listening to 'joint_states' for joint states
+[move_group-23] [WARN] [1786447750.024458615] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.024494061] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [INFO] [1786447750.027611178] [moveit_ros.current_state_monitor]: Listening to joint states on topic 'joint_states'
+[controller_server-15] [WARN] [1786447749.989772751] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[queen-3] [INFO] [1786447750.040039690] [queen_node]: Yeni Görev Üretildi: 1f5212a5 (PLACE B)
+[move_group-23] [INFO] [1786447750.045216925] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to '/worker_1/attached_collision_object' for attached collision objects
+[queen-3] [INFO] [1786447750.046600779] [queen_node]: 📢 İhale Açıldı: 1f5212a5
+[move_group-23] [WARN] [1786447750.047197603] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.047225505] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.048897282] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.048940453] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [INFO] [1786447750.055874955] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Publishing maintained planning scene on 'monitored_planning_scene'
+[move_group-23] [WARN] [1786447750.056924841] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.056958274] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [INFO] [1786447750.057703176] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Starting planning scene monitor
+[controller_server-15] [WARN] [1786447750.059429415] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [INFO] [1786447750.067863429] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to '/worker_1/planning_scene'
+[move_group-23] [INFO] [1786447750.067917531] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.
+[move_group-23] [INFO] [1786447750.071255263] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to 'collision_object'
+[move_group-23] [INFO] [1786447750.072505426] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to 'planning_scene_world' for planning scene world geometry
+[move_group-23] [WARN] [1786447750.072891553] [moveit.ros.occupancy_map_monitor.middleware_handle]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead
+[move_group-23] [ERROR] [1786447750.072913344] [moveit.ros.occupancy_map_monitor.middleware_handle]: No 3D sensor plugin(s) defined for octomap updates
+[controller_server-15] [WARN] [1786447750.072813385] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.084728672] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.084760471] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.096379220] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.096414977] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.106015306] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.106061693] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.121577486] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.121622361] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [INFO] [1786447750.123691335] [local_costmap.local_costmap]: Using plugin "obstacle_layer"
+[move_group-23] [WARN] [1786447750.132990848] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.133024401] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.134987226] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.135011912] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.137395939] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.137421768] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.143465363] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.143512111] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.148029273] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.148058337] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.160572390] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.160609721] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [INFO] [1786447750.166911151] [local_costmap.local_costmap]: Subscribed to Topics: scan
+[move_group-23] [WARN] [1786447750.173954097] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.173997729] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [WARN] [1786447750.187750063] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.191716909] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.191745352] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [WARN] [1786447750.194253533] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.195558840] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.195582845] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.213992765] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.214026970] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.220295548] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.220321787] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.231038989] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.231075347] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [WARN] [1786447750.233092213] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [INFO] [1786447750.256204394] [local_costmap.local_costmap]: Initialized plugin "obstacle_layer"
+[controller_server-15] [INFO] [1786447750.256313028] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[controller_server-15] [INFO] [1786447750.262948056] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[move_group-23] [WARN] [1786447750.263210751] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.263233163] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.276642181] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.276678770] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [WARN] [1786447750.278448250] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [WARN] [1786447750.280469725] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.298816977] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.298869496] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.302507353] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.302536848] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [WARN] [1786447750.317950188] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [WARN] [1786447750.346976921] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [WARN] [1786447750.358892317] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [WARN] [1786447750.365078741] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [INFO] [1786447750.384456553] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[move_group-23] [INFO] [1786447750.391471536] [moveit.ros_planning_interface.moveit_cpp]: Loading planning pipeline 'move_group'
+[controller_server-15] [INFO] [1786447750.400486243] [controller_server]: Created goal checker : general_goal_checker of type nav2_controller::SimpleGoalChecker
+[controller_server-15] [INFO] [1786447750.401109196] [controller_server]: Controller Server has general_goal_checker  goal checkers available.
+[move_group-23] [WARN] [1786447750.404661532] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.404697940] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [INFO] [1786447750.411651257] [controller_server]: Created controller : FollowPath of type dwb_core::DWBLocalPlanner
+[controller_server-15] [WARN] [1786447750.414218720] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.415006653] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.415039224] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.416666206] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.416696283] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [INFO] [1786447750.418963199] [moveit.ros_planning.planning_pipeline]: Using planning interface 'OMPL'
+[move_group-23] [WARN] [1786447750.421687507] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.421713195] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [INFO] [1786447750.423726625] [moveit_ros.add_time_optimal_parameterization]: Param 'move_group.path_tolerance' was not set. Using default value: 0.100000
+[controller_server-15] [WARN] [1786447750.421776865] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [INFO] [1786447750.423763825] [moveit_ros.add_time_optimal_parameterization]: Param 'move_group.resample_dt' was not set. Using default value: 0.100000
+[move_group-23] [INFO] [1786447750.423772481] [moveit_ros.add_time_optimal_parameterization]: Param 'move_group.min_angle_change' was not set. Using default value: 0.001000
+[move_group-23] [INFO] [1786447750.423801025] [moveit_ros.fix_workspace_bounds]: Param 'move_group.default_workspace_bounds' was not set. Using default value: 10.000000
+[move_group-23] [INFO] [1786447750.423829539] [moveit_ros.fix_start_state_bounds]: Param 'move_group.start_state_max_bounds_error' was set to 0.100000
+[move_group-23] [INFO] [1786447750.423838656] [moveit_ros.fix_start_state_bounds]: Param 'move_group.start_state_max_dt' was not set. Using default value: 0.500000
+[move_group-23] [INFO] [1786447750.423858844] [moveit_ros.fix_start_state_collision]: Param 'move_group.start_state_max_dt' was not set. Using default value: 0.500000
+[move_group-23] [INFO] [1786447750.423872299] [moveit_ros.fix_start_state_collision]: Param 'move_group.jiggle_fraction' was not set. Using default value: 0.020000
+[move_group-23] [INFO] [1786447750.423882438] [moveit_ros.fix_start_state_collision]: Param 'move_group.max_sampling_attempts' was not set. Using default value: 100
+[move_group-23] [INFO] [1786447750.423904450] [moveit.ros_planning.planning_pipeline]: Using planning request adapter 'Add Time Optimal Parameterization'
+[move_group-23] [INFO] [1786447750.423914138] [moveit.ros_planning.planning_pipeline]: Using planning request adapter 'Fix Workspace Bounds'
+[move_group-23] [INFO] [1786447750.423920740] [moveit.ros_planning.planning_pipeline]: Using planning request adapter 'Fix Start State Bounds'
+[move_group-23] [INFO] [1786447750.423926621] [moveit.ros_planning.planning_pipeline]: Using planning request adapter 'Fix Start State In Collision'
+[move_group-23] [INFO] [1786447750.423931971] [moveit.ros_planning.planning_pipeline]: Using planning request adapter 'Fix Start State Path Constraints'
+[move_group-23] [WARN] [1786447750.428809642] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.428844297] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [WARN] [1786447750.428819551] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [WARN] [1786447750.432268752] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.433649150] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.433673987] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [INFO] [1786447750.438709034] [controller_server]: Setting transform_tolerance to 0.200000
+[controller_server-15] [WARN] [1786447750.442425459] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.444725868] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.444756115] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [WARN] [1786447750.464219639] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.465242945] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.465276077] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.466263095] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.466289665] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [WARN] [1786447750.466298521] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [WARN] [1786447750.474893719] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.475072295] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.475103233] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.489054211] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.489153267] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [WARN] [1786447750.492664766] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.510724077] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.510772157] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [WARN] [1786447750.525114251] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.526149760] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.526236814] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [INFO] [1786447750.550699767] [controller_server]: Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
+[controller_server-15] [WARN] [1786447750.551455750] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [INFO] [1786447750.552565899] [controller_server]: Critic plugin initialized
+[controller_server-15] [INFO] [1786447750.552769432] [controller_server]: Using critic "Oscillation" (dwb_critics::OscillationCritic)
+[controller_server-15] [INFO] [1786447750.553333364] [controller_server]: Critic plugin initialized
+[controller_server-15] [INFO] [1786447750.553475872] [controller_server]: Using critic "BaseObstacle" (dwb_critics::BaseObstacleCritic)
+[controller_server-15] [INFO] [1786447750.553670999] [controller_server]: Critic plugin initialized
+[controller_server-15] [INFO] [1786447750.553790083] [controller_server]: Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
+[controller_server-15] [WARN] [1786447750.564861431] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [WARN] [1786447750.568319880] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [INFO] [1786447750.573332084] [controller_server]: Critic plugin initialized
+[controller_server-15] [WARN] [1786447750.573435539] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [INFO] [1786447750.581042596] [controller_server]: Using critic "PathAlign" (dwb_critics::PathAlignCritic)
+[controller_server-15] [INFO] [1786447750.581771789] [controller_server]: Critic plugin initialized
+[controller_server-15] [INFO] [1786447750.583873064] [controller_server]: Using critic "PathDist" (dwb_critics::PathDistCritic)
+[controller_server-15] [INFO] [1786447750.588248779] [controller_server]: Critic plugin initialized
+[controller_server-15] [INFO] [1786447750.590849394] [controller_server]: Using critic "GoalDist" (dwb_critics::GoalDistCritic)
+[controller_server-15] [WARN] [1786447750.598611463] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [INFO] [1786447750.600861498] [controller_server]: Critic plugin initialized
+[controller_server-15] [INFO] [1786447750.600926931] [controller_server]: Controller Server has FollowPath  controllers available.
+[move_group-23] [WARN] [1786447750.601438765] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.601465655] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.605648378] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.605680649] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.612938990] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.612987692] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[controller_server-15] [WARN] [1786447750.615449876] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.655139327] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.655188279] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.661653438] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [WARN] [1786447750.661695497] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[move_group-23] [INFO] [1786447750.819357630] [moveit.plugins.moveit_simple_controller_manager]: Added FollowJointTrajectory controller for arm_controller
+[move_group-23] [INFO] [1786447750.819623360] [moveit.plugins.moveit_simple_controller_manager]: Returned 1 controllers in list
+[move_group-23] [INFO] [1786447750.819655260] [moveit.plugins.moveit_simple_controller_manager]: Returned 1 controllers in list
+[move_group-23] [INFO] [1786447750.829620075] [moveit_ros.trajectory_execution_manager]: Trajectory execution is not managing controllers
+[move_group-23] [INFO] [1786447750.829701078] [move_group.move_group]: MoveGroup debug mode is ON
+[parameter_bridge-10] [INFO] [1786447750.832888617] [worker_1.ros_gz_bridge]: Passing message from ROS geometry_msgs/msg/Twist to Gazebo gz.msgs.Twist (showing msg only once per type)
+[rviz2-7] [INFO] [1786447751.131047465] [rviz2]: Message Filter dropping message: frame 'worker_1/lidar_link' at time 44.600 for reason 'discarding message because the queue is full'
+[move_group-23] [INFO] [1786447751.238149016] [move_group.move_group]: 
+[move_group-23] 
+[move_group-23] ********************************************************
+[move_group-23] * MoveGroup using: 
+[move_group-23] *     - ApplyPlanningSceneService
+[move_group-23] *     - ClearOctomapService
+[move_group-23] *     - CartesianPathService
+[move_group-23] *     - ExecuteTrajectoryAction
+[move_group-23] *     - GetPlanningSceneService
+[move_group-23] *     - KinematicsService
+[move_group-23] *     - MoveAction
+[move_group-23] *     - MotionPlanService
+[move_group-23] *     - QueryPlannersService
+[move_group-23] *     - StateValidationService
+[move_group-23] ********************************************************
+[move_group-23] 
+[move_group-23] [INFO] [1786447751.238321771] [moveit_move_group_capabilities_base.move_group_context]: MoveGroup context using planning plugin ompl_interface/OMPLPlanner
+[move_group-23] [INFO] [1786447751.238351817] [moveit_move_group_capabilities_base.move_group_context]: MoveGroup context initialization complete
+[move_group-23] [96mLoading 'move_group/ApplyPlanningSceneService'...
+[move_group-23] [0m[96mLoading 'move_group/ClearOctomapService'...
+[move_group-23] [0m[96mLoading 'move_group/MoveGroupCartesianPathService'...
+[move_group-23] [0m[96mLoading 'move_group/MoveGroupExecuteTrajectoryAction'...
+[move_group-23] [0m[96mLoading 'move_group/MoveGroupGetPlanningSceneService'...
+[move_group-23] [0m[96mLoading 'move_group/MoveGroupKinematicsService'...
+[move_group-23] [0m[96mLoading 'move_group/MoveGroupMoveAction'...
+[move_group-23] [0m[96mLoading 'move_group/MoveGroupPlanService'...
+[move_group-23] [0m[96mLoading 'move_group/MoveGroupQueryPlannersService'...
+[move_group-23] [0m[96mLoading 'move_group/MoveGroupStateValidationService'...
+[move_group-23] [0m[92m
+[move_group-23] You can start planning now!
+[move_group-23] 
+[queen-3] [WARN] [1786447752.534989387] [queen_node]: ⚠️ İhale İptal: 1f5212a5 için hiç teklif gelmedi. Yeniden sıraya alınıyor.
+[queen-3] [INFO] [1786447753.037238322] [queen_node]: 📢 İhale Açıldı: 1f5212a5
+[spawner-13] [WARN] [1786447755.047574035] [spawner_joint_state_broadcaster]: Could not contact service /worker_1/controller_manager/list_controllers
+[spawner-13] [INFO] [1786447755.048285244] [spawner_joint_state_broadcaster]: waiting for service /worker_1/controller_manager/list_controllers to become available...
+[queen-3] [WARN] [1786447755.536458036] [queen_node]: ⚠️ İhale İptal: 1f5212a5 için hiç teklif gelmedi. Yeniden sıraya alınıyor.
+[queen-3] [INFO] [1786447756.034855251] [queen_node]: 📢 İhale Açıldı: 1f5212a5
+[spawner-14] [WARN] [1786447756.395507531] [spawner_arm_controller]: Could not contact service /worker_1/controller_manager/list_controllers
+[spawner-14] [INFO] [1786447756.396119763] [spawner_arm_controller]: waiting for service /worker_1/controller_manager/list_controllers to become available...
