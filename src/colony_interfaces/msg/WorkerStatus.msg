@@ -20,3 +20,4 @@ float32 progress
 
 # Durum mesajı güncellenme zamanı
 float64 timestamp
+float32 battery_level

@@ -37,6 +37,7 @@ class ColonyConfig:
     SIMULATOR: str = "gazebo"               # "gazebo" | "isaac_sim"
     GAZEBO_VERSION: str = "fortress"        # Ignition Gazebo Fortress 6.17.1
     ROS_DISTRO: str = "humble"
+    NAV2_ENABLED: bool = False              # True ise gerçek Nav2, False ise timer ile simüle edilir
 
     # ─────────────────────────────────────────
     #  ROBOT FILOSU
@@ -45,6 +46,9 @@ class ColonyConfig:
     WORKER_NAMESPACE: str = "worker"        # worker_1, worker_2, ...
     WORKER_MAX_SPEED: float = 0.5           # m/s — mobil taban max hız
     WORKER_MAX_ANGULAR_SPEED: float = 1.0   # rad/s
+    BATTERY_DRAIN_PER_SEC: float = 0.5      # Saniyede ne kadar şarj azalır
+    BATTERY_CHARGE_PER_TASK: float = 10.0   # Görev bitince kazanılan şarj
+    BATTERY_MIN_BID_THRESHOLD: float = 20.0 # İhale için gereken minimum batarya %'si
 
     # ─────────────────────────────────────────
     #  GÖREV & SENARYO
@@ -57,10 +61,11 @@ class ColonyConfig:
     # ─────────────────────────────────────────
     #  GÖREV ATAMA ALGORİTMASI
     # ─────────────────────────────────────────
-    ALGORITHM: str = "AUCTION"              # "AUCTION" | "FCFS"
+    ALGORITHM: str = "FCFS"                 # "AUCTION" | "FCFS"
     AUCTION_TIMEOUT_SEC: float = 2.0        # Teklifleri bekleme süresi (saniye)
     AUCTION_MIN_BIDS: int = 1               # En az kaç teklif gelmeli
     BID_COST_METRIC: str = "distance"       # "distance" | "time" | "weighted"
+    TASK_MAX_RETRY: int = 3                 # Bir görev kaç kere yeniden açılabilir
 
     # ─────────────────────────────────────────
     #  NAVİGASYON (Nav2)

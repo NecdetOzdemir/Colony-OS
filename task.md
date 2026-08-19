@@ -67,9 +67,9 @@
 ---
 
 ## 👑 AŞAMA 8 — Kraliçe & İşçi İhale Mantığı (`colony_queen` & `colony_worker`)
-- [ ] **8.1** Kraliçe (`queen_node.py`): Rasgele görev açma ve İhale (Auction) yönetimi
-- [ ] **8.2** İşçi (`worker_node.py`): Mesafe/batarya maliyet hesabı yapıp teklif (Bid) atma
-- [ ] **[İNSAN ONAYI BEKLENİYOR]** Terminalde ihalelerin açıldığı, tekliflerin toplandığı ve en yakın robota görevin verildiği izleniyor mu?
+- [x] **8.1** Kraliçe (`queen_node.py`): Rasgele görev açma ve İhale (Auction) / FCFS yönetimi
+- [x] **8.2** İşçi (`worker_node.py`): Mesafe/batarya maliyet hesabı yapıp teklif (Bid) atma
+- [x] **[İNSAN ONAYLANDI]** Terminalde ihalelerin açıldığı, tekliflerin toplandığı ve en yakın robota görevin verildiği izlendi.
 
 ---
 
@@ -99,7 +99,7 @@
 | **5** | Tek Robot Navigasyon | 🟢 **Tamamlandı** | 2 / 2 | 100% ✅ |
 | **6** | Çoklu Robot Navigasyon | 🟢 **Tamamlandı** | 2 / 2 | 100% ✅ |
 | **7** | Manipülasyon & Kol | 🟢 **Tamamlandı** | 2 / 2 | 100% ✅ |
-| **8** | Kraliçe & İşçi MRTA | 🟡 Bekliyor | 0 / 2 | 0% |
+| **8** | Kraliçe & İşçi MRTA | 🟢 **Tamamlandı** | 2 / 2 | 100% ✅ |
 | **9** | Entegrasyon & Logger | 🟡 Bekliyor | 0 / 2 | 0% |
 | **10**| Benchmark & Final | 🟡 Bekliyor | 0 / 2 | 0% |
-| **TOPLAM** | **Colony-OS** | 🟡 **Devam Ediyor** | **19 / 25** | **76%** |
+| **TOPLAM** | **Colony-OS** | 🟡 **Devam Ediyor** | **21 / 25** | **84%** |

@@ -12,8 +12,8 @@
 ### 👉 **[task.md — Görev Listesi & İlerleme](./task.md)**
 
 ```
-19 / 25 görev tamamlandı  (%76)
-███████████████████░░░░░  Devam Ediyor
+21 / 25 görev tamamlandı  (%84)
+█████████████████████░░░  Devam Ediyor
 ```
 
 ---

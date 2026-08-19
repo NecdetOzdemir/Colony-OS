@@ -20,6 +20,7 @@ class QueenNode(Node):
         self.workers = {}
         self.pending_tasks = []
         self.active_auctions = {}
+        self.task_retries = {}  # Sonsuz döngü koruması için
 
         # --- YAYINCILAR (PUBLISHERS) ---
         self.auction_pub = self.create_publisher(Task, CC.TOPIC_TASK_BROADCAST, 10)
@@ -53,8 +54,8 @@ class QueenNode(Node):
         task.task_type = random.choice(CC.TASK_TYPES)
         task.object_id = random.choice(CC.OBJECT_TYPES)
         
-        task.target_x = random.uniform(2.0, 8.0)
-        task.target_y = random.uniform(-4.0, 4.0)
+        task.target_x = random.uniform(-CC.WAREHOUSE_WIDTH/2 + 1.0, CC.WAREHOUSE_WIDTH/2 - 1.0)
+        task.target_y = random.uniform(-CC.WAREHOUSE_HEIGHT/2 + 1.0, CC.WAREHOUSE_HEIGHT/2 - 1.0)
         task.target_z = 0.5
         
         task.priority = random.randint(1, 10)
@@ -62,10 +63,31 @@ class QueenNode(Node):
         task.created_at = self.get_current_time_sec()
 
         self.pending_tasks.append(task)
+        self.task_retries[task.task_id] = 0
         self.get_logger().info(f'Yeni Görev Üretildi: {task.task_id} ({task.task_type} {task.object_id})')
 
     def manage_auctions(self) -> None:
         """MRTA İhale Yöneticisi"""
+        
+        # FCFS (First-Come-First-Serve) Mantığı
+        if CC.ALGORITHM == "FCFS":
+            tasks_to_keep = []
+            for task in self.pending_tasks:
+                assigned = False
+                for worker_id, status in self.workers.items():
+                    if status.state == "IDLE":
+                        self.get_logger().info(f'🚀 FCFS: {task.task_id} görevi doğrudan {worker_id} robotuna veriliyor.')
+                        self.assign_task_to_worker(task, worker_id)
+                        assigned = True
+                        # Durumu meşgul gibi işaretle ki aynı anda birden fazla görev atamasın
+                        self.workers[worker_id].state = "ASSIGNING" 
+                        break
+                if not assigned:
+                    tasks_to_keep.append(task)
+            self.pending_tasks = tasks_to_keep
+            return
+
+        # AUCTION (İhale) Mantığı
         while self.pending_tasks:
             task = self.pending_tasks.pop(0)
             self.start_auction(task)
@@ -103,14 +125,22 @@ class QueenNode(Node):
         task = auction['task']
 
         if not bids or len(bids) < CC.AUCTION_MIN_BIDS:
-            self.get_logger().warn(f'⚠️ İhale İptal: {task_id} için yeterli teklif gelmedi. Yeniden sıraya alınıyor.')
-            self.pending_tasks.append(task)
+            self.requeue_task(task, f"{task_id} için yeterli teklif gelmedi.")
             return
 
         winning_bid = min(bids, key=lambda b: b.cost)
         self.get_logger().info(f'🏆 İhaleyi Kazanan: {winning_bid.worker_id} (Görev: {task_id}, Maliyet: {winning_bid.cost:.2f})')
 
         self.assign_task_to_worker(task, winning_bid.worker_id)
+
+    def requeue_task(self, task: Task, reason: str) -> None:
+        """Görevi tekrar sıraya alır veya limiti aştıysa iptal eder."""
+        self.task_retries[task.task_id] += 1
+        if self.task_retries[task.task_id] > CC.TASK_MAX_RETRY:
+            self.get_logger().error(f'❌ GÖREV İPTAL: {task.task_id} ({reason}). Max deneme sayısı ({CC.TASK_MAX_RETRY}) aşıldı.')
+        else:
+            self.get_logger().warn(f'⚠️ Görev ertelendi: {task.task_id} ({reason}). Tekrar denenecek ({self.task_retries[task.task_id]}/{CC.TASK_MAX_RETRY}).')
+            self.pending_tasks.append(task)
 
     def assign_task_to_worker(self, task: Task, worker_id: str) -> None:
         """Görevi kazanan işçiye resmî olarak atar (Service çağrısı ile)"""
@@ -125,8 +155,7 @@ class QueenNode(Node):
         
         # ASENKRON KONTROL: wait_for_service yerine service_is_ready()
         if not client.service_is_ready():
-            self.get_logger().error(f'{worker_id} servisi şu an hazır değil! Görev sıraya alınıyor.')
-            self.pending_tasks.append(task)
+            self.requeue_task(task, f"{worker_id} servisi şu an hazır değil")
             return
 
         req = AssignTask.Request()
@@ -143,6 +172,7 @@ class QueenNode(Node):
                 self.get_logger().info(f'✅ Görev {task_id}, {worker_id} robotuna başarıyla atandı.')
             else:
                 self.get_logger().error(f'❌ Görev {task_id} atanamadı: {response.message}')
+                # Başarısız atamalarda yeniden sıraya alabilmek için pending_tasks vs. yönetilebilir, ancak şimdilik logluyoruz.
         except Exception as e:
             self.get_logger().error(f'Service çağrısında hata: {e}')
 

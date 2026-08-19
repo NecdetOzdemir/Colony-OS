@@ -44,6 +44,7 @@ class WorkerNode(Node):
 
         # Asenkron manipülasyon zamanlayıcısı için referans
         self.manipulation_timer = None
+        self.nav_sim_timer = None
 
     def get_current_time_sec(self) -> float:
         return self.get_clock().now().nanoseconds / 1e9
@@ -53,16 +54,25 @@ class WorkerNode(Node):
         self.current_y = msg.pose.pose.position.y
 
     def publish_status(self) -> None:
+        # Batarya düşüşü simülasyonu
+        if self.state in ["NAVIGATING", "MANIPULATING"]:
+            self.battery = max(0.0, self.battery - CC.BATTERY_DRAIN_PER_SEC)
+
         msg = WorkerStatus()
         msg.worker_id = self.worker_id
         msg.state = self.state
         msg.pos_x = self.current_x
         msg.pos_y = self.current_y
+        msg.pos_yaw = 0.0
+        msg.battery_level = float(self.battery)
+        msg.current_task_id = self.current_task.task_id if self.current_task else ""
+        msg.progress = 50.0 if self.state == "NAVIGATING" else (100.0 if self.state == "MANIPULATING" else 0.0)
+        msg.timestamp = self.get_current_time_sec()
 
         self.status_pub.publish(msg)
 
     def auction_callback(self, task: Task) -> None:
-        if self.state != "IDLE" or self.battery < 20.0:
+        if self.state != "IDLE" or self.battery < CC.BATTERY_MIN_BID_THRESHOLD:
             return
 
         distance = math.hypot(task.target_x - self.current_x, task.target_y - self.current_y)
@@ -72,6 +82,10 @@ class WorkerNode(Node):
         bid.worker_id = self.worker_id
         bid.task_id = task.task_id
         bid.cost = float(cost)
+        bid.timestamp = self.get_current_time_sec()
+        bid.worker_x = self.current_x
+        bid.worker_y = self.current_y
+        
         self.bid_pub.publish(bid)
         self.get_logger().info(f'💸 {task.task_id} için teklif verildi. Maliyet: {cost:.2f}')
 
@@ -83,8 +97,8 @@ class WorkerNode(Node):
             response.message = "İşçi şu an meşgul."
             return response
 
-        # Nav2 Server hazır mı diye asenkron (bloklamadan) kontrol et
-        if not self.nav_client.server_is_ready():
+        # Nav2 Server hazır mı diye asenkron (bloklamadan) kontrol et (Eğer Nav2 açıksa)
+        if CC.NAV2_ENABLED and not self.nav_client.server_is_ready():
             self.get_logger().error('Nav2 action server hazır değil!')
             response.success = False
             response.message = "Nav2 Server hazır değil."
@@ -102,6 +116,11 @@ class WorkerNode(Node):
         return response
 
     def execute_task(self, task: Task) -> None:
+        if not CC.NAV2_ENABLED:
+            self.get_logger().info('⚠️ Nav2 KAPALI: Sürüş 3 saniye simüle edilecek...')
+            self.nav_sim_timer = self.create_timer(3.0, self.nav_result_callback)
+            return
+
         goal_msg = NavigateToPose.Goal()
         goal_msg.pose.header.frame_id = 'map'
         goal_msg.pose.header.stamp = self.get_clock().now().to_msg()
@@ -124,11 +143,21 @@ class WorkerNode(Node):
         result_future = goal_handle.get_result_async()
         result_future.add_done_callback(self.nav_result_callback)
 
-    def nav_result_callback(self, future):
+    def nav_result_callback(self, future=None):
         """Navigasyon bittiğinde manipülasyona (MoveIt) geçer"""
+        # Eğer Nav2 kapalıysa ve timer tetiklediyse, o timer'ı iptal et
+        if self.nav_sim_timer is not None:
+            self.nav_sim_timer.cancel()
+            self.nav_sim_timer = None
+
         self.get_logger().info('📍 Hedefe ulaşıldı! Manipülasyon (Pick/Place) başlıyor...')
         self.state = "MANIPULATING"
         
+        # Konumu hedefe eşitle (simülasyon için)
+        if self.current_task:
+            self.current_x = self.current_task.target_x
+            self.current_y = self.current_task.target_y
+
         # ASENKRON BEKLEME: time.sleep(3.0) yerine tek seferlik timer kullanıyoruz
         self.manipulation_timer = self.create_timer(3.0, self.finish_manipulation)
 
@@ -140,6 +169,11 @@ class WorkerNode(Node):
             self.manipulation_timer = None
 
         self.get_logger().info(f'✅ Görev {self.current_task.task_id} tamamlandı!')
+        
+        # Batarya şarjını simüle et
+        self.battery = min(100.0, self.battery + CC.BATTERY_CHARGE_PER_TASK)
+        self.get_logger().info(f'🔋 Şarj durumu: {self.battery:.1f}%')
+
         self.state = "IDLE"
         self.current_task = None
 
